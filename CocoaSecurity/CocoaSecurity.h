@@ -11,6 +11,11 @@
 #import <Foundation/Foundation.h>
 #import <Foundation/NSException.h>
 
+//! Project version number for CocoaSecurity-iOS.
+FOUNDATION_EXPORT double CocoaSecurity_iOSVersionNumber;
+
+//! Project version string for CocoaSecurity-iOS.
+FOUNDATION_EXPORT const unsigned char CocoaSecurity_iOSVersionString[];
 
 #pragma mark - CocoaSecurityResult
 @interface CocoaSecurityResult : NSObject

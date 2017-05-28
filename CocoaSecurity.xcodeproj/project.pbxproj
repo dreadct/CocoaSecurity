@@ -20,6 +20,10 @@
 		21540A06183DD81A00E4C15B /* CocoaSecurity.m in Sources */ = {isa = PBXBuildFile; fileRef = 2113924116EAD6AF00AFDF87 /* CocoaSecurity.m */; };
 		21FB346C189601A6002F38DE /* Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 21FB346B189601A6002F38DE /* Base64.m */; };
 		21FB346D18960347002F38DE /* Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 21FB346B189601A6002F38DE /* Base64.m */; };
+		AB8468091EDB512F00094366 /* Base64.h in Headers */ = {isa = PBXBuildFile; fileRef = 21FB346A189601A6002F38DE /* Base64.h */; };
+		AB84680A1EDB513600094366 /* CocoaSecurity.m in Sources */ = {isa = PBXBuildFile; fileRef = 2113924116EAD6AF00AFDF87 /* CocoaSecurity.m */; };
+		AB84680B1EDB513900094366 /* CocoaSecurity.h in Headers */ = {isa = PBXBuildFile; fileRef = 2113923F16EAD6AF00AFDF87 /* CocoaSecurity.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AB84680C1EDB51C400094366 /* Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 21FB346B189601A6002F38DE /* Base64.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +67,8 @@
 		21BB8A2E17FEA0EC0032C38C /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		21FB346A189601A6002F38DE /* Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Base64.h; path = submodules/Base64/Base64/Base64.h; sourceTree = SOURCE_ROOT; };
 		21FB346B189601A6002F38DE /* Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Base64.m; path = submodules/Base64/Base64/Base64.m; sourceTree = SOURCE_ROOT; };
+		AB8468011EDB512500094366 /* CocoaSecurity.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CocoaSecurity.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB84680D1EDB525600094366 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +86,13 @@
 			files = (
 				215409ED183DD72F00E4C15B /* XCTest.framework in Frameworks */,
 				215409EE183DD72F00E4C15B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AB8467FD1EDB512500094366 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,6 +114,7 @@
 			children = (
 				2113923716EAD6AF00AFDF87 /* libCocoaSecurity.a */,
 				215409EC183DD72F00E4C15B /* CocoaSecurityTests.xctest */,
+				AB8468011EDB512500094366 /* CocoaSecurity.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -122,6 +136,7 @@
 				21FB34691896019A002F38DE /* Submodules */,
 				2113923F16EAD6AF00AFDF87 /* CocoaSecurity.h */,
 				2113924116EAD6AF00AFDF87 /* CocoaSecurity.m */,
+				AB84680D1EDB525600094366 /* Info.plist */,
 			);
 			path = CocoaSecurity;
 			sourceTree = "<group>";
@@ -159,6 +174,18 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		AB8467FE1EDB512500094366 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB84680B1EDB513900094366 /* CocoaSecurity.h in Headers */,
+				AB8468091EDB512F00094366 /* Base64.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
 		2113923616EAD6AF00AFDF87 /* CocoaSecurity */ = {
 			isa = PBXNativeTarget;
@@ -195,6 +222,24 @@
 			productReference = 215409EC183DD72F00E4C15B /* CocoaSecurityTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		AB8468001EDB512500094366 /* CocoaSecurity-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AB8468081EDB512500094366 /* Build configuration list for PBXNativeTarget "CocoaSecurity-iOS" */;
+			buildPhases = (
+				AB8467FC1EDB512500094366 /* Sources */,
+				AB8467FD1EDB512500094366 /* Frameworks */,
+				AB8467FE1EDB512500094366 /* Headers */,
+				AB8467FF1EDB512500094366 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "CocoaSecurity-iOS";
+			productName = "CocoaSecurity-iOS";
+			productReference = AB8468011EDB512500094366 /* CocoaSecurity.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -205,6 +250,10 @@
 				TargetAttributes = {
 					215409EB183DD72F00E4C15B = {
 						TestTargetID = 2113923616EAD6AF00AFDF87;
+					};
+					AB8468001EDB512500094366 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -222,6 +271,7 @@
 			targets = (
 				2113923616EAD6AF00AFDF87 /* CocoaSecurity */,
 				215409EB183DD72F00E4C15B /* CocoaSecurityTests */,
+				AB8468001EDB512500094366 /* CocoaSecurity-iOS */,
 			);
 		};
 /* End PBXProject section */
@@ -232,6 +282,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				215409F5183DD72F00E4C15B /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AB8467FF1EDB512500094366 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,6 +314,15 @@
 				21540A03183DD7F000E4C15B /* CocoaSecurityDecoder_Tests.m in Sources */,
 				21540A02183DD7F000E4C15B /* CocoaSecurity_Tests.m in Sources */,
 				21540A04183DD7F000E4C15B /* CocoaSecurityEncoder_Tests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AB8467FC1EDB512500094366 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB84680C1EDB51C400094366 /* Base64.m in Sources */,
+				AB84680A1EDB513600094366 /* CocoaSecurity.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -420,6 +486,93 @@
 			};
 			name = Release;
 		};
+		AB8468061EDB512500094366 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				INFOPLIST_FILE = CocoaSecurity/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = kelp404.CocoaSecurity;
+				PRODUCT_NAME = CocoaSecurity;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		AB8468071EDB512500094366 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				INFOPLIST_FILE = CocoaSecurity/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = kelp404.CocoaSecurity;
+				PRODUCT_NAME = CocoaSecurity;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -449,6 +602,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		AB8468081EDB512500094366 /* Build configuration list for PBXNativeTarget "CocoaSecurity-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AB8468061EDB512500094366 /* Debug */,
+				AB8468071EDB512500094366 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
