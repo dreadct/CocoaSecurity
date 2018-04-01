@@ -6,8 +6,10 @@
 //
 //
 
-#import <XCTest/XCTest.h>
-#import "CocoaSecurity.h"
+@import Foundation;
+@import XCTest;
+
+@import CocoaSecurity;
 
 
 @interface CocoaSecurityDecoder_Tests : XCTestCase {
